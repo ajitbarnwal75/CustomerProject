@@ -1,0 +1,59 @@
+<div class="container">
+  <!--<div class="row" *ngIf="item">-->
+    <div class="row">
+  <div class="col-md-12"><h2>Create Form</h2></div>
+
+  <div class="col-md-12">
+  <form #createCustForm="ngForm" (ngSubmit)="createConsumer()" novalidate>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label" id="">firstname</label>
+        <input class="form-control" id="firstname" required #firstname="ngModel" pattern="[a-zA-Z]+$" [(ngModel)]="formData.firstname" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="firstname.invalid && firstname.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">lastname</label>
+        <input class="form-control"  id="lastname" required #lastname="ngModel"  pattern="[a-zA-Z]+$" [(ngModel)]="formData.lastname" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="lastname.invalid && lastname.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">email</label>
+        <input class="form-control" id="email" required #email="ngModel" email [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="email.invalid && email.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">phone_Number</label>
+        <input class="form-control" id="phone_Number" required #phone_Number="ngModel" minlength="10" [(ngModel)]="formData.phone_Number" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="phone_Number.invalid && phone_Number.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">country_code</label>
+        <input class="form-control" id="country_code" required #country_code="ngModel" [(ngModel)]="formData.country_code" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="country_code.invalid && country_code.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">gender</label>
+        <input class="form-control" id="gender" required #gender="ngModel"  [(ngModel)]="formData.gender"  pattern="[a-zA-Z]+$" minlength="1" [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="gender.invalid && gender.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">balance</label>
+        <input class="form-control" id="balance" required #balance="ngModel" [(ngModel)]="formData.balance"  [ngModelOptions]="{standalone: true}"/>
+        <span class="text-danger" *ngIf="balance.invalid && balance.touched">Please enter a valid input</span>
+    </div>
+    <div class="form-group">
+      <input [disabled]="!createCustForm.form.valid" type="submit" value="Create" class="btn btn-primary"/>
+      <button [disabled]="!createCustForm.form.valid">Create</button>
+      <!--<input type="submit" value="Create" class="btn btn-primary" (click)="updateDataEvent.emit(true);" />-->
+    </div>
+    </div>
+    <div class="col-md-4"> <span class="text-danger" >{{this.message}}</span></div>
+
+  </div>
+
+  </form>
+  </div>
+</div>
+</div>

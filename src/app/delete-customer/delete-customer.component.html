@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"><h2>Delete CustomerInfo</h2></div>
+
+    <div class="col-md-12">
+    <form ngform="#createCustForm" (ngSubmit)="deleteCustomer()">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        <div class="form-group">
+          <label class="control-label" id="">firstname</label>
+          <input class="form-control" disabled="disabled" id="firstname" [(ngModel)]="formData.firstname" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">lastname</label>
+          <input class="form-control" disabled="disabled" id="lastname" [(ngModel)]="formData.lastname" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">email</label>
+          <input class="form-control" disabled="disabled" id="email" [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">phone_Number</label>
+          <input class="form-control" disabled="disabled" id="phone_Number" [(ngModel)]="formData.phone_Number" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">country_code</label>
+          <input class="form-control" disabled="disabled" id="country_code" [(ngModel)]="formData.country_code" [ngModelOptions]="{standalone: true}"/>
+          <span asp-validation-for="country_code" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">gender</label>
+          <input  class="form-control" disabled="disabled" id="gender"  [(ngModel)]="formData.gender" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+          <label class="control-label">balance</label>
+          <input class="form-control" disabled="disabled" id="balance" [(ngModel)]="formData.balance" [ngModelOptions]="{standalone: true}"/>
+          <span class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+      </div>
+      </div>
+      <div class="col-md-4"><span class="text-danger" >{{this.message}}</span></div>
+
+    </div>
+
+    </form>
+
+    </div>
+  </div>
+  </div>

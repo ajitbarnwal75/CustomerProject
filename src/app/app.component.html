@@ -1,0 +1,18 @@
+<!--<div class="container" *ngIf="display">-->
+  <div class="container">
+    <!--<a routerLink="create"><button  class="btn btn-primary" style="position: absolute;top: 0;right:0;" >
+  Create
+</button></a>-->
+<div>
+  <!--<app-customer-grid  [item]="display"></app-customer-grid>-->
+</div>
+</div>
+
+<!--<div (updateDataEvent)="updateData($any($event))"><app-create-customer [item]="!display"></app-create-customer></div>-->
+<div class="container">
+<a class="btn btn-primary" routerLink="create">Create</a>
+<!--<a routerLink="update">Edit</a>
+<a routerLink="delete">Delete</a>-->
+<a class="btn btn-primary" routerLink="">List</a>
+</div>
+<router-outlet></router-outlet>

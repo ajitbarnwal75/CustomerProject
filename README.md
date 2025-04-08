@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-Your local changes
-=======
-Changes from the remote repository
->>>>>>> [commit hash]
+# Customer Project
+
+This is the README file.
+
+Local changes made in my project.
+
+Changes made from the remote repository.
